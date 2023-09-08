@@ -1,4 +1,4 @@
-package com.example.reactiverestapi.controllers;
+package com.example.reactiverestapi.rest;
 
 import com.example.reactiverestapi.model.Product;
 import com.example.reactiverestapi.repositories.ProductRepository;
@@ -12,10 +12,10 @@ import reactor.core.publisher.Mono;
 
 @RestController
 @RequestMapping("/product")
-public class ProductController {
+public class ProductRestController {
     private final ProductRepository repo;
 
-    public ProductController(final ProductRepository repo) {
+    public ProductRestController(final ProductRepository repo) {
         this.repo = repo;
     }
 
