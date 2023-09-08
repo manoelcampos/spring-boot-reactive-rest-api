@@ -1,5 +1,5 @@
-insert into produto (nome) values ('TV');
-insert into produto (nome) values ('iPhone');
-insert into produto (nome) values ('Galaxy S22');
-insert into produto (nome) values ('Ventilador');
-insert into produto (nome) values ('Geladeira');
+insert into product (name) values ('TV');
+insert into product (name) values ('iPhone');
+insert into product (name) values ('Galaxy S22');
+insert into product (name) values ('Ventilador');
+insert into product (name) values ('Geladeira');

@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>reactive-rest-api</artifactId>
+	<artifactId>spring-boot-reactive-rest-api</artifactId>
 	<version>0.0.1</version>
 	<name>reactive-rest-api</name>
 	<description>Reactive Programming with Spring Boot REST Controllers and Repositories</description>

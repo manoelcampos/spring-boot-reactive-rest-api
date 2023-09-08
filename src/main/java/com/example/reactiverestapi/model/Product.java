@@ -13,12 +13,12 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter @Setter
 @Entity
-public class Produto {
+public class Product {
     /**
      * Annotation to avoid: required identifier property not found for class ConnectionManager
      */
     @org.springframework.data.annotation.Id
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nome;
+    private String name;
 }

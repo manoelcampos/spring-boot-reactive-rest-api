@@ -1,6 +1,6 @@
 package com.example.reactiverestapi.controllers;
 
-import com.example.reactiverestapi.model.Produto;
+import com.example.reactiverestapi.model.Product;
 import com.example.reactiverestapi.repositories.ProdutoRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,21 +11,21 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping("/produto")
-public class ProdutoController {
+@RequestMapping("/product")
+public class ProductController {
     private final ProdutoRepository repo;
 
-    public ProdutoController(final ProdutoRepository repo) {
+    public ProductController(final ProdutoRepository repo) {
         this.repo = repo;
     }
 
     @GetMapping
-    public ResponseEntity<Flux<Produto>> list(){
+    public ResponseEntity<Flux<Product>> list(){
         return ResponseEntity.ofNullable(repo.findAll());
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Mono<Produto>> findById(@PathVariable long id){
+    public ResponseEntity<Mono<Product>> findById(@PathVariable long id){
         return ResponseEntity.ofNullable(repo.findById(id));
     }
 }
