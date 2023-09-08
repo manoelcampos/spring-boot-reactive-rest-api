@@ -1,4 +1,4 @@
-# Reactive Programming with Spring Boot REST Controllers and Repositories
+# Reactive Programming with Spring Boot REST Controllers and Repositories [![build](https://github.com/manoelcampos/spring-boot-reactive-rest-api/actions/workflows/maven.yml/badge.svg)](https://github.com/manoelcampos/spring-boot-reactive-rest-api/actions/workflows/maven.yml)
 
 Shows how to use the  [Reactive Relational Database Connectivity (R2DBC)](https://r2dbc.io),
 a Reactive SQL Client with Spring Repositories 
