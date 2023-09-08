@@ -2,6 +2,7 @@ package com.example.reactiverestapi.controllers;
 
 import com.example.reactiverestapi.model.Produto;
 import com.example.reactiverestapi.repositories.ProdutoRepository;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,12 +25,12 @@ public class ProdutoController {
     }
 
     @GetMapping
-    public Flux<Produto> list(){
-        return repo.findAll();
+    public ResponseEntity<Flux<Produto>> list(){
+        return ResponseEntity.ofNullable(repo.findAll());
     }
 
     @GetMapping("/{id}")
-    public Mono<Produto> findById(@PathVariable long id){
-        return repo.findById(id);
+    public ResponseEntity<Mono<Produto>> findById(@PathVariable long id){
+        return ResponseEntity.ofNullable(repo.findById(id));
     }
 }
