@@ -10,6 +10,7 @@ import org.thymeleaf.spring6.context.webflux.ReactiveDataDriverContextVariable;
 import reactor.core.publisher.Flux;
 
 /**
+ * Spring MVC Reactive Controller
  * https://mkyong.com/spring-boot/spring-boot-webflux-thymeleaf-reactive-example/
  */
 @Controller
