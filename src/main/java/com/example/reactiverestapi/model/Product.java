@@ -21,4 +21,9 @@ public class Product {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+
+    @Override
+    public String toString() {
+        return "Product %d: %s".formatted(id, name);
+    }
 }
