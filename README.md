@@ -14,3 +14,4 @@ and how to make your Spring REST Controllers reactive too (using [Reactor projec
 - https://spring.io/blog/2016/07/28/reactive-programming-with-spring-5-0-m1
 - https://softwaremill.com/project-loom-meets-quarkus/
 - https://spring.io/blog/2023/02/27/web-applications-and-project-loom
+- https://www.baeldung.com/spring-6-virtual-threads
