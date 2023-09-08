@@ -1,7 +1,7 @@
 package com.example.reactiverestapi.controllers;
 
 import com.example.reactiverestapi.model.Product;
-import com.example.reactiverestapi.repositories.ProdutoRepository;
+import com.example.reactiverestapi.repositories.ProductRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,9 +13,9 @@ import reactor.core.publisher.Mono;
 @RestController
 @RequestMapping("/product")
 public class ProductController {
-    private final ProdutoRepository repo;
+    private final ProductRepository repo;
 
-    public ProductController(final ProdutoRepository repo) {
+    public ProductController(final ProductRepository repo) {
         this.repo = repo;
     }
 
