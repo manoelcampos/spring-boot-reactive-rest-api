@@ -12,7 +12,7 @@
 	<artifactId>reactive-rest-api</artifactId>
 	<version>0.0.1</version>
 	<name>reactive-rest-api</name>
-	<description>Reactive Programming for Spring Boot</description>
+	<description>Reactive Programming with Spring Boot REST Controllers and Repositories</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
