@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.thymeleaf.spring6.context.webflux.IReactiveDataDriverContextVariable;
 import org.thymeleaf.spring6.context.webflux.ReactiveDataDriverContextVariable;
 import reactor.core.publisher.Flux;
 
@@ -22,10 +23,13 @@ public class ProductMvcController {
 
     @GetMapping()
     public String list(final Model model){
+        model.addAttribute("products", newReactiveList());
+        return "product/list";
+    }
+
+    private IReactiveDataDriverContextVariable newReactiveList() {
         //It seems Thymeleaf just works with multiple values (Flux instead of Mono)
         final Flux<Product> products = repo.findAll();
-        var reactiveList = new ReactiveDataDriverContextVariable(products, 1);
-        model.addAttribute("products", reactiveList);
-        return "product/list";
+        return new ReactiveDataDriverContextVariable(products, 1);
     }
 }
