@@ -17,7 +17,7 @@ import reactor.core.publisher.Flux;
 @Controller
 @RequestMapping("/product/list")
 @AllArgsConstructor // Includes the all args constructor for dependency injection
-public class ProdutoMvcController {
+public class ProductMvcController {
     private final ProductRepository repo;
 
     @GetMapping()
