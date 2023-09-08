@@ -2,6 +2,7 @@ package com.example.reactiverestapi.rest;
 
 import com.example.reactiverestapi.model.Product;
 import com.example.reactiverestapi.repositories.ProductRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,12 +16,9 @@ import reactor.core.publisher.Mono;
  */
 @RestController
 @RequestMapping("/product")
+@AllArgsConstructor // Includes the all args constructor for dependency injection
 public class ProductRestController {
     private final ProductRepository repo;
-
-    public ProductRestController(final ProductRepository repo) {
-        this.repo = repo;
-    }
 
     @GetMapping
     public ResponseEntity<Flux<Product>> list(){

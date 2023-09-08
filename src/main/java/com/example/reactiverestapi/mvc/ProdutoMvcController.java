@@ -2,6 +2,7 @@ package com.example.reactiverestapi.mvc;
 
 import com.example.reactiverestapi.model.Product;
 import com.example.reactiverestapi.repositories.ProductRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,12 +16,9 @@ import reactor.core.publisher.Flux;
  */
 @Controller
 @RequestMapping("/product/list")
+@AllArgsConstructor // Includes the all args constructor for dependency injection
 public class ProdutoMvcController {
     private final ProductRepository repo;
-
-    public ProdutoMvcController(final ProductRepository repo) {
-        this.repo = repo;
-    }
 
     @GetMapping()
     public String list(final Model model){
